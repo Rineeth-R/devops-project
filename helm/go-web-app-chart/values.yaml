@@ -4,7 +4,7 @@ image:
   repository: rineeth05/courses
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1"
+  tag: "13414302956"
 
 ingress:
   enabled: false
