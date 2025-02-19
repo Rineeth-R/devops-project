@@ -9,6 +9,9 @@ on:
       - 'k8s/**'
       - 'README.md'
 
+permissions:
+  contents: write  # 🔹 Allow GitHub Actions to push changes
+
 jobs:
   
   build:
@@ -93,4 +96,5 @@ jobs:
         git config --global user.name "R Rineeth"
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
-        git push origin master
+        git pull --rebase origin master  # 🔹 Pull latest changes before pushing
+        git push origin master  # 🔹 Push after pulling updates
